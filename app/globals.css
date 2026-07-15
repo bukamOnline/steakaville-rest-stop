@@ -985,6 +985,14 @@ h2 {
   text-transform: uppercase;
 }
 
+.map-placeholder > span:not(.map-pin) {
+  margin-top: 8px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .map-placeholder em {
   margin-top: 18px;
   font-family: Georgia, "Times New Roman", serif;

@@ -103,7 +103,7 @@ export default function Home() {
   return (
     <main>
       <div className="top-strip" aria-label="Restaurant contact details">
-        <p>Claremont, St. Ann, Jamaica</p>
+        <p>Steakaville Rest Stop · Clinic Street · Claremont, St. Ann</p>
         <span aria-hidden="true">◆</span>
         <a href="tel:+18763870564">Call +1 876 387 0564</a>
       </div>
@@ -325,7 +325,7 @@ export default function Home() {
           <div className="visit-grid">
             <div>
               <small>Location</small>
-              <strong>Clinic St.<br />Claremont, St. Ann<br />Jamaica</strong>
+              <strong>Steakaville Rest Stop<br />Clinic Street<br />Claremont, St. Ann, Jamaica</strong>
             </div>
             <div>
               <small>Contact</small>
@@ -340,14 +340,15 @@ export default function Home() {
         </div>
         <a
           className="map-placeholder"
-          href="https://www.google.com/maps/search/?api=1&query=Clinic+Street+Claremont+St+Ann+Jamaica"
+          href="https://www.google.com/maps/search/?api=1&query=Steakaville+Rest+Stop+Clinic+Street+Claremont+St+Ann+Jamaica"
           target="_blank"
           rel="noreferrer"
           aria-label="Open Steakaville location in Google Maps"
         >
           <span className="map-pin" aria-hidden="true">●</span>
           <small>Map placeholder</small>
-          <strong>Claremont, St. Ann</strong>
+          <strong>Steakaville Rest Stop</strong>
+          <span>Clinic Street · Claremont, St. Ann</span>
           <em>Open in Google Maps →</em>
         </a>
       </section>
