@@ -143,7 +143,7 @@ export default function Home() {
           <p className="eyebrow">Restaurant · Bar · Catering</p>
           <h1>Fire. Flavour.<br /><span>Good vibes.</span></h1>
           <p className="hero-text">
-            Jamaican-inspired food from the grill, a welcoming bar, and catering made for memorable gatherings.
+            Authentic Jamaican Food from the grill, a welcoming bar, and catering made for memorable gatherings.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#inquiry">Get a Catering Quote</a>
