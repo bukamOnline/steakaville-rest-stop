@@ -590,20 +590,6 @@ h2 {
   letter-spacing: 0.05em;
 }
 
-.sample-label {
-  padding: 8px 10px;
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  background: rgba(17, 18, 15, 0.78);
-  backdrop-filter: blur(8px);
-  color: rgba(255, 255, 255, 0.74);
-  font-size: 0.58rem;
-  font-weight: 900;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
 .menu-card-copy {
   padding: 28px;
 }

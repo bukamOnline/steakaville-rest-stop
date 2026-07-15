@@ -159,12 +159,12 @@ export default function Home() {
           <img
             className="hero-food-photo"
             src="/menu/roast-jerk-chicken.jpg"
-            alt="Sample presentation of Jamaican roast jerk chicken with festival"
+            alt="Jamaican roast jerk chicken with festival"
           />
           <div className="rasta-lines" aria-hidden="true"><i /><i /><i /></div>
           <div className="placeholder-badge">
-            <small>Menu preview</small>
-            <strong>Sample image</strong>
+            <small>Signature dish</small>
+            <strong>Roast Jerk Chicken</strong>
           </div>
           <div className="hero-stamp" aria-hidden="true">
             <span>FROM THE</span>
@@ -204,11 +204,10 @@ export default function Home() {
                 <img
                   className="food-photo"
                   src={item.image}
-                  alt={`Sample presentation of ${item.name}`}
+                  alt={item.name}
                   loading="lazy"
                 />
                 <span className="menu-number" aria-hidden="true">{item.number}</span>
-                <small className="sample-label">Sample image</small>
               </div>
               <div className="menu-card-copy">
                 <h3>{item.name}</h3>
