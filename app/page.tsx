@@ -5,21 +5,57 @@ import { FormEvent, useState } from "react";
 const menuHighlights = [
   {
     number: "01",
-    name: "Fire-Grilled Steak",
-    description: "Bold island seasoning, deep char, and made-to-order flavor.",
-    tone: "red",
+    name: "Escovitch Fish",
+    description: "Crisp fried fish topped with spicy pickled peppers, carrot, and onion.",
+    image: "/menu/escovitch-fish.jpg",
   },
   {
     number: "02",
-    name: "Jerk From The Grill",
-    description: "Smoky, spicy, and rooted in the taste of Jamaica.",
-    tone: "gold",
+    name: "Garlic Butter Lobster",
+    description: "Caribbean lobster finished with rich garlic herb butter and lime.",
+    image: "/menu/garlic-butter-lobster.jpg",
   },
   {
     number: "03",
-    name: "Island Bar Favourites",
-    description: "Cold drinks and good vibes to complete the meal.",
-    tone: "green",
+    name: "Steamed Lobster",
+    description: "Tender lobster steamed with scallion, thyme, peppers, and island seasoning.",
+    image: "/menu/steamed-lobster.jpg",
+  },
+  {
+    number: "04",
+    name: "Steamed Fish",
+    description: "Whole fish steamed in a savoury broth with okra, vegetables, and thyme.",
+    image: "/menu/steamed-fish.jpg",
+  },
+  {
+    number: "05",
+    name: "Roast Jerk Chicken",
+    description: "Smoky jerk chicken roasted with deep spice, char, and pan juices.",
+    image: "/menu/roast-jerk-chicken.jpg",
+  },
+  {
+    number: "06",
+    name: "Seafood Soup",
+    description: "A rich, comforting soup loaded with seafood, pumpkin, corn, and ground food.",
+    image: "/menu/seafood-soup.jpg",
+  },
+  {
+    number: "07",
+    name: "Mannish Water",
+    description: "Traditional Jamaican goat soup with green banana, yam, herbs, and spice.",
+    image: "/menu/mannish-water.jpg",
+  },
+  {
+    number: "08",
+    name: "Curry Goat",
+    description: "Tender goat simmered in fragrant Jamaican curry gravy and served island-style.",
+    image: "/menu/curry-goat.jpg",
+  },
+  {
+    number: "09",
+    name: "Conch Soup",
+    description: "Hearty Caribbean conch soup with pumpkin, yam, vegetables, and fresh herbs.",
+    image: "/menu/conch-soup.jpg",
   },
 ];
 
@@ -119,11 +155,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-visual" role="img" aria-label="Placeholder for a signature Steakaville food photograph">
+        <div className="hero-visual">
+          <img
+            className="hero-food-photo"
+            src="/menu/roast-jerk-chicken.jpg"
+            alt="Sample presentation of Jamaican roast jerk chicken with festival"
+          />
           <div className="rasta-lines" aria-hidden="true"><i /><i /><i /></div>
           <div className="placeholder-badge">
-            <small>Signature food photo</small>
-            <strong>Coming soon</strong>
+            <small>Menu preview</small>
+            <strong>Sample image</strong>
           </div>
           <div className="hero-stamp" aria-hidden="true">
             <span>FROM THE</span>
@@ -153,19 +194,21 @@ export default function Home() {
         <div className="section-heading light">
           <p className="eyebrow">From the kitchen & bar</p>
           <h2>Big flavour lives here.</h2>
-          <p>Our full menu is on the way. Here&apos;s a taste of the Steakaville experience.</p>
+          <p>From the sea to the soup pot, this is the Jamaican food we&apos;re proud to serve.</p>
         </div>
 
         <div className="menu-grid">
           {menuHighlights.map((item) => (
             <article className="menu-card" key={item.name}>
-              <div
-                className={`food-placeholder ${item.tone}`}
-                role="img"
-                aria-label={`Placeholder for ${item.name} photograph`}
-              >
-                <span>{item.number}</span>
-                <small>Photo placeholder</small>
+              <div className="food-photo-wrap">
+                <img
+                  className="food-photo"
+                  src={item.image}
+                  alt={`Sample presentation of ${item.name}`}
+                  loading="lazy"
+                />
+                <span className="menu-number" aria-hidden="true">{item.number}</span>
+                <small className="sample-label">Sample image</small>
               </div>
               <div className="menu-card-copy">
                 <h3>{item.name}</h3>
