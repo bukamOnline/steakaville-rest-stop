@@ -6,57 +6,74 @@ const menuHighlights = [
   {
     number: "01",
     name: "Escovitch Fish",
-    description: "Crisp fried fish topped with spicy pickled peppers, carrot, and onion.",
-    image: "/menu/escovitch-fish.jpg",
+    description: "Whole fried fish topped with tangy pickled onion, carrot, and Scotch bonnet pepper.",
+    image: "/authentic/escovitch-fish.jpg",
+    position: "50% 48%",
   },
   {
     number: "02",
     name: "Garlic Butter Lobster",
-    description: "Caribbean lobster finished with rich garlic herb butter and lime.",
-    image: "/menu/garlic-butter-lobster.jpg",
+    description: "Split Caribbean lobster grilled and finished with garlic butter and island seasoning.",
+    image: "/authentic/garlic-butter-lobster.jpg",
+    position: "50% 65%",
   },
   {
     number: "03",
-    name: "Steamed Lobster",
-    description: "Tender lobster steamed with scallion, thyme, peppers, and island seasoning.",
-    image: "/menu/steamed-lobster.jpg",
+    name: "Steamed Lobster & Vegetables",
+    description: "Caribbean lobster steamed with okra, corn, broccoli, cauliflower, and fresh island herbs.",
+    image: "/authentic/steamed-lobster.jpg",
+    position: "50% 52%",
   },
   {
     number: "04",
-    name: "Steamed Fish",
-    description: "Whole fish steamed in a savoury broth with okra, vegetables, and thyme.",
-    image: "/menu/steamed-fish.jpg",
+    name: "Steamed Fish & Shrimp",
+    description: "Whole fish and shrimp steamed in a savoury broth with okra, corn, and mixed vegetables.",
+    image: "/authentic/steamed-fish-shrimp.jpg",
+    position: "50% 62%",
   },
   {
     number: "05",
-    name: "Roast Jerk Chicken",
-    description: "Smoky jerk chicken roasted with deep spice, char, and pan juices.",
-    image: "/menu/roast-jerk-chicken.jpg",
+    name: "Brown Stew Fish",
+    description: "Fried whole fish simmered in rich brown gravy and plated with rice, plantain, and vegetables.",
+    image: "/authentic/brown-stew-fish.jpg",
+    position: "50% 48%",
   },
   {
     number: "06",
     name: "Seafood Soup",
-    description: "A rich, comforting soup loaded with seafood, pumpkin, corn, and ground food.",
-    image: "/menu/seafood-soup.jpg",
+    description: "A hearty island soup filled with seafood, corn, dumpling, ground provisions, and warming spice.",
+    image: "/authentic/seafood-soup.jpg",
+    position: "50% 58%",
   },
   {
     number: "07",
-    name: "Mannish Water",
-    description: "Traditional Jamaican goat soup with green banana, yam, herbs, and spice.",
-    image: "/menu/mannish-water.jpg",
+    name: "Garlic Shrimp & Vegetables",
+    description: "Seasoned shrimp tossed with broccoli, okra, cauliflower, corn, peppers, and carrots.",
+    image: "/authentic/garlic-shrimp-vegetables.jpg",
+    position: "50% 53%",
   },
   {
     number: "08",
-    name: "Curry Goat",
-    description: "Tender goat simmered in fragrant Jamaican curry gravy and served island-style.",
-    image: "/menu/curry-goat.jpg",
+    name: "Curry Seafood Platter",
+    description: "A generous mix of island seafood simmered in Jamaican curry gravy with vegetables and ground provisions.",
+    image: "/authentic/curry-lobster-seafood.jpg",
+    position: "50% 42%",
   },
   {
     number: "09",
-    name: "Conch Soup",
-    description: "Hearty Caribbean conch soup with pumpkin, yam, vegetables, and fresh herbs.",
-    image: "/menu/conch-soup.jpg",
+    name: "Steakaville Seafood Platter",
+    description: "A generous spread of whole fish and shrimp with escovitch vegetables, bammy, and plantain.",
+    image: "/authentic/seafood-platter.jpg",
+    position: "50% 56%",
   },
+];
+
+const moreFavorites = [
+  "Roast Jerk Chicken",
+  "Mannish Water",
+  "Curry Goat",
+  "Conch Soup",
+  "Roast Breadfruit",
 ];
 
 const cateringOptions = [
@@ -204,8 +221,9 @@ export default function Home() {
                 <img
                   className="food-photo"
                   src={item.image}
-                  alt={item.name}
+                  alt={`${item.name} prepared by Steakaville Rest Stop`}
                   loading="lazy"
+                  style={{ objectPosition: item.position }}
                 />
                 <span className="menu-number" aria-hidden="true">{item.number}</span>
               </div>
@@ -217,17 +235,23 @@ export default function Home() {
           ))}
         </div>
 
+        <div className="more-favorites" aria-label="More Jamaican favourites">
+          <strong>More Jamaican favourites</strong>
+          <p>{moreFavorites.join(" · ")}</p>
+          <span>Menu items may vary by availability. Ask us about today&apos;s specials.</span>
+        </div>
+
         <div className="menu-note">
           <span>Planning a special spread?</span>
-          <a href="#inquiry">Let&apos;s build your menu →</a>
+          <a href="#inquiry">Let&apos;s build your catering menu →</a>
         </div>
       </section>
 
       <section className="catering-section" id="catering">
-        <div className="catering-photo" role="img" aria-label="Placeholder for a Steakaville catered event photograph">
+        <div className="catering-photo" role="img" aria-label="An authentic Steakaville seafood and vegetable spread ready for guests">
           <div className="placeholder-badge light-badge">
-            <small>Catering photo</small>
-            <strong>Your event here</strong>
+            <small>Authentic Jamaican catering</small>
+            <strong>Made by Steakaville</strong>
           </div>
         </div>
 
@@ -342,10 +366,10 @@ export default function Home() {
           href="https://www.google.com/maps/search/?api=1&query=Steakaville+Rest+Stop+Clinic+Street+Claremont+St+Ann+Jamaica"
           target="_blank"
           rel="noreferrer"
-          aria-label="Open Steakaville location in Google Maps"
+          aria-label="See the Steakaville Rest Stop location and open it in Google Maps"
         >
           <span className="map-pin" aria-hidden="true">●</span>
-          <small>Map placeholder</small>
+          <small>Clinic Street</small>
           <strong>Steakaville Rest Stop</strong>
           <span>Clinic Street · Claremont, St. Ann</span>
           <em>Open in Google Maps →</em>

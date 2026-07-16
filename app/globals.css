@@ -611,9 +611,38 @@ h2 {
   line-height: 1.65;
 }
 
-.menu-note {
+.more-favorites {
   max-width: 1380px;
   margin: 42px auto 0;
+  padding: 24px clamp(20px, 3vw, 36px);
+  border-left: 5px solid var(--gold);
+  background: #20221d;
+}
+
+.more-favorites strong {
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.more-favorites p {
+  margin: 10px 0 8px;
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  line-height: 1.55;
+}
+
+.more-favorites span {
+  color: #a6a49c;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.menu-note {
+  max-width: 1380px;
+  margin: 22px auto 0;
   padding: 21px 0 0;
   display: flex;
   justify-content: center;
@@ -639,24 +668,16 @@ h2 {
   min-height: 780px;
   position: relative;
   background:
-    linear-gradient(rgba(17, 18, 15, 0.08), rgba(17, 18, 15, 0.3)),
-    radial-gradient(circle at 55% 42%, rgba(255, 219, 117, 0.35) 0 13%, transparent 14%),
-    repeating-linear-gradient(34deg, transparent 0 70px, rgba(255, 255, 255, 0.035) 71px 73px),
-    linear-gradient(135deg, #284f33 0%, #1c3024 40%, #111c16 100%);
+    linear-gradient(rgba(17, 18, 15, 0.04), rgba(17, 18, 15, 0.42)),
+    url("/authentic/catering-spread.jpg") center / cover no-repeat;
 }
 
 .catering-photo::before {
   content: "";
-  width: 62%;
-  height: 38%;
   position: absolute;
-  top: 31%;
-  left: 18%;
-  border: 26px solid #27241c;
-  border-radius: 50%;
-  background: linear-gradient(145deg, #7a3b23, #d17d32 55%, #47261e);
-  box-shadow: 0 38px 65px rgba(0, 0, 0, 0.42);
-  transform: rotate(-8deg);
+  inset: 0;
+  background: linear-gradient(90deg, transparent 48%, rgba(17, 18, 15, 0.22));
+  pointer-events: none;
 }
 
 .light-badge {
@@ -917,25 +938,21 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background:
-    linear-gradient(28deg, transparent 43%, rgba(17, 18, 15, 0.16) 44% 46%, transparent 47%),
-    linear-gradient(142deg, transparent 43%, rgba(17, 18, 15, 0.12) 44% 46%, transparent 47%),
-    repeating-linear-gradient(0deg, transparent 0 54px, rgba(17, 18, 15, 0.07) 55px 57px),
-    #d8d0bd;
+  background: url("/authentic/restaurant-exterior.jpg") center / cover no-repeat;
+  color: white;
   text-align: center;
 }
 
 .map-placeholder::before {
   content: "";
-  width: 42%;
-  height: 100%;
   position: absolute;
-  top: 0;
-  left: 35%;
-  border-right: 6px double rgba(255, 255, 255, 0.88);
-  border-left: 6px double rgba(255, 255, 255, 0.88);
-  background: rgba(199, 39, 32, 0.13);
-  transform: rotate(17deg) scale(1.25);
+  inset: 0;
+  background: rgba(17, 18, 15, 0.58);
+  transition: background 180ms ease;
+}
+
+.map-placeholder:hover::before {
+  background: rgba(17, 18, 15, 0.48);
 }
 
 .map-placeholder > * {
@@ -964,7 +981,7 @@ h2 {
 
 .map-placeholder small {
   margin-bottom: 10px;
-  color: var(--red);
+  color: var(--gold);
   font-size: 0.6rem;
   font-weight: 900;
   letter-spacing: 0.14em;
@@ -975,6 +992,7 @@ h2 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: clamp(2rem, 3vw, 3.5rem);
   font-weight: 400;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.58);
   text-transform: uppercase;
 }
 
