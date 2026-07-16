@@ -158,13 +158,13 @@ export default function Home() {
         <div className="hero-visual">
           <img
             className="hero-food-photo"
-            src="/menu/roast-jerk-chicken.jpg"
-            alt="Jamaican roast jerk chicken with festival"
+            src="/steakaville-main.jpg"
+            alt="Chef outside Steakaville Rest Stop in Claremont, Jamaica"
           />
           <div className="rasta-lines" aria-hidden="true"><i /><i /><i /></div>
           <div className="placeholder-badge">
-            <small>Signature dish</small>
-            <strong>Roast Jerk Chicken</strong>
+            <small>Welcome to</small>
+            <strong>Steakaville Bar &amp; Grill</strong>
           </div>
           <div className="hero-stamp" aria-hidden="true">
             <span>FROM THE</span>

@@ -369,7 +369,7 @@ h2 {
   position: absolute;
   inset: 0;
   object-fit: cover;
-  object-position: center;
+  object-position: 50% 50%;
 }
 
 .rasta-lines {
@@ -1197,6 +1197,10 @@ footer > p:last-child {
 
   .hero-visual {
     min-height: 480px;
+  }
+
+  .hero-food-photo {
+    object-position: 48% 50%;
   }
 
   .hero-stamp {
