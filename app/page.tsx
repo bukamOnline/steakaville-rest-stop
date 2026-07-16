@@ -2,6 +2,8 @@
 
 import { FormEvent, useState } from "react";
 
+const assetBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const menuHighlights = [
   {
     number: "01",
@@ -175,7 +177,7 @@ export default function Home() {
         <div className="hero-visual">
           <img
             className="hero-food-photo"
-            src="/steakaville-main.jpg"
+            src={`${assetBasePath}/steakaville-main.jpg`}
             alt="Chef outside Steakaville Rest Stop in Claremont, Jamaica"
           />
           <div className="rasta-lines" aria-hidden="true"><i /><i /><i /></div>
@@ -220,7 +222,7 @@ export default function Home() {
               <div className="food-photo-wrap">
                 <img
                   className="food-photo"
-                  src={item.image}
+                  src={`${assetBasePath}${item.image}`}
                   alt={`${item.name} prepared by Steakaville Rest Stop`}
                   loading="lazy"
                   style={{ objectPosition: item.position }}
@@ -249,6 +251,12 @@ export default function Home() {
 
       <section className="catering-section" id="catering">
         <div className="catering-photo" role="img" aria-label="An authentic Steakaville seafood and vegetable spread ready for guests">
+          <img
+            className="catering-food-photo"
+            src={`${assetBasePath}/authentic/catering-spread.jpg`}
+            alt=""
+            aria-hidden="true"
+          />
           <div className="placeholder-badge light-badge">
             <small>Authentic Jamaican catering</small>
             <strong>Made by Steakaville</strong>
@@ -368,6 +376,12 @@ export default function Home() {
           rel="noreferrer"
           aria-label="See the Steakaville Rest Stop location and open it in Google Maps"
         >
+          <img
+            className="location-photo"
+            src={`${assetBasePath}/authentic/restaurant-exterior.jpg`}
+            alt=""
+            aria-hidden="true"
+          />
           <span className="map-pin" aria-hidden="true">●</span>
           <small>Clinic Street</small>
           <strong>Steakaville Rest Stop</strong>

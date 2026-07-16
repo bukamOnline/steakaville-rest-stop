@@ -666,16 +666,24 @@ h2 {
 
 .catering-photo {
   min-height: 780px;
+  overflow: hidden;
   position: relative;
-  background:
-    linear-gradient(rgba(17, 18, 15, 0.04), rgba(17, 18, 15, 0.42)),
-    url("/authentic/catering-spread.jpg") center / cover no-repeat;
+  background: #1c3024;
+}
+
+.catering-food-photo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
 }
 
 .catering-photo::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(90deg, transparent 48%, rgba(17, 18, 15, 0.22));
   pointer-events: none;
 }
@@ -938,7 +946,8 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("/authentic/restaurant-exterior.jpg") center / cover no-repeat;
+  overflow: hidden;
+  background: #223127;
   color: white;
   text-align: center;
 }
@@ -947,6 +956,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: rgba(17, 18, 15, 0.58);
   transition: background 180ms ease;
 }
@@ -958,6 +968,15 @@ h2 {
 .map-placeholder > * {
   position: relative;
   z-index: 2;
+}
+
+.map-placeholder > .location-photo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  object-fit: cover;
 }
 
 .map-pin {
