@@ -68,6 +68,20 @@ const menuHighlights = [
     image: "/authentic/seafood-platter.jpg",
     position: "50% 56%",
   },
+  {
+    number: "10",
+    name: "Fish & Garden Vegetables",
+    description: "Whole fish served with a colourful medley of green beans, carrot, sweet pepper, and island seasoning.",
+    image: "/authentic/fish-with-vegetables.jpg",
+    position: "50% 61%",
+  },
+  {
+    number: "11",
+    name: "Grilled Lobster & Escovitch",
+    description: "Grilled Caribbean lobster served with crisp pickled onion, peppers, okra, corn, and carrot.",
+    image: "/authentic/grilled-lobster-escovitch.jpg",
+    position: "50% 50%",
+  },
 ];
 
 const moreFavorites = [
