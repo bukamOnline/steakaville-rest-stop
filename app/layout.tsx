@@ -19,6 +19,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Steakaville Rest Stop | Restaurant, Bar & Catering",
   description: "Fire-grilled Jamaican flavour, a welcoming bar, and catering for every celebration in Claremont, St. Ann.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "Steakaville Rest Stop",
     description: "Restaurant, bar, and catering in Claremont, St. Ann. Road To Bob Marley.",

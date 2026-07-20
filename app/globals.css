@@ -1067,7 +1067,7 @@ footer > p:last-child {
   align-items: center;
   gap: 9px;
   border-radius: 999px;
-  background: var(--green);
+  background: #25d366;
   color: white;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
   font-size: 0.68rem;
@@ -1078,18 +1078,14 @@ footer > p:last-child {
 }
 
 .whatsapp-fab:hover {
-  background: #208b48;
+  background: #1ebd5a;
   transform: translateY(-3px);
 }
 
-.whatsapp-fab span {
+.whatsapp-fab img {
   width: 31px;
   height: 31px;
-  display: grid;
-  place-items: center;
-  border: 2px solid white;
-  border-radius: 50%;
-  font-size: 0.58rem;
+  display: block;
 }
 
 @media (max-width: 1080px) {

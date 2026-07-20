@@ -423,7 +423,7 @@ export default function Home() {
         rel="noreferrer"
         aria-label="Message Steakaville on WhatsApp"
       >
-        <span aria-hidden="true">WA</span>
+        <img src={`${assetBasePath}/whatsapp.svg`} alt="" aria-hidden="true" />
         Message us
       </a>
     </main>
