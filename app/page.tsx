@@ -88,6 +88,7 @@ const menuHighlights = [
     description: "Tender steamed fish with okra, carrot, and chocho, served with callaloo rice and a fresh garden salad.",
     image: "/authentic/steamed-fish-callaloo-rice.jpg",
     position: "50% 50%",
+    portrait: true,
   },
   {
     number: "13",
@@ -95,6 +96,7 @@ const menuHighlights = [
     description: "Caribbean lobster loaded with shrimp and steamed vegetables, served with seasoned callaloo rice.",
     image: "/authentic/lobster-shrimp-callaloo-rice.jpg",
     position: "50% 50%",
+    portrait: true,
   },
 ];
 
@@ -247,7 +249,10 @@ export default function Home() {
         <div className="menu-grid">
           {menuHighlights.map((item) => (
             <article className="menu-card" key={item.name}>
-              <div className="food-photo-wrap">
+              <div
+                className={item.portrait ? "food-photo-wrap portrait-photo-wrap" : "food-photo-wrap"}
+                style={item.portrait ? { backgroundImage: `url(${assetBasePath}${item.image})` } : undefined}
+              >
                 <img
                   className="food-photo"
                   src={`${assetBasePath}${item.image}`}
