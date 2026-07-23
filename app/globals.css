@@ -1297,6 +1297,11 @@ footer > p:last-child {
     aspect-ratio: 3 / 4;
   }
 
+  .portrait-photo-wrap .food-photo {
+    object-fit: cover;
+    object-position: center;
+  }
+
   .menu-note {
     display: grid;
     text-align: center;
