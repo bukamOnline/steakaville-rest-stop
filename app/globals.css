@@ -569,38 +569,8 @@ h2 {
   transition: transform 420ms ease;
 }
 
-.portrait-photo-wrap {
-  isolation: isolate;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.portrait-photo-wrap::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: rgba(8, 10, 7, 0.62);
-  backdrop-filter: blur(9px);
-}
-
-.portrait-photo-wrap .food-photo {
-  position: relative;
-  z-index: 1;
-  object-fit: contain;
-}
-
-.portrait-photo-wrap .menu-number {
-  z-index: 2;
-}
-
 .menu-card:hover .food-photo {
   transform: scale(1.035);
-}
-
-.menu-card:hover .portrait-photo-wrap .food-photo {
-  transform: none;
 }
 
 .menu-number {
@@ -1295,11 +1265,6 @@ footer > p:last-child {
 
   .portrait-photo-wrap {
     aspect-ratio: 3 / 4;
-  }
-
-  .portrait-photo-wrap .food-photo {
-    object-fit: cover;
-    object-position: center;
   }
 
   .menu-note {

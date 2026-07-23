@@ -251,7 +251,6 @@ export default function Home() {
             <article className="menu-card" key={item.name}>
               <div
                 className={item.portrait ? "food-photo-wrap portrait-photo-wrap" : "food-photo-wrap"}
-                style={item.portrait ? { backgroundImage: `url(${assetBasePath}${item.image})` } : undefined}
               >
                 <img
                   className="food-photo"
