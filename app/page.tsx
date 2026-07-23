@@ -87,14 +87,14 @@ const menuHighlights = [
     name: "Steamed Fish & Callaloo Rice",
     description: "Tender steamed fish with okra, carrot, and chocho, served with callaloo rice and a fresh garden salad.",
     image: "/authentic/steamed-fish-callaloo-rice.jpg",
-    position: "50% 54%",
+    position: "50% 50%",
   },
   {
     number: "13",
     name: "Lobster & Shrimp with Callaloo Rice",
     description: "Caribbean lobster loaded with shrimp and steamed vegetables, served with seasoned callaloo rice.",
     image: "/authentic/lobster-shrimp-callaloo-rice.jpg",
-    position: "50% 58%",
+    position: "50% 50%",
   },
 ];
 
